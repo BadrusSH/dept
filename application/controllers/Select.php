@@ -29,7 +29,7 @@ class Select extends CI_Controller
 
     public function getWil()
     {
-        $idpos = $this->input->post('pos_id');
+        $idpos = $this->input->post('id');
         $data = $this->Dynamic_model->getDataWil($idpos);
         $output = '<option value="">--Pilih Wilayah-- </option>';
         foreach ($data as $row) {
@@ -38,7 +38,7 @@ class Select extends CI_Controller
         $this->output->set_content_type('application/json')->set_output(json_encode($output));
     }
 
-    public function getDesa()
+    public function getJbtn()
     {
         $iddept = $this->input->post('id');
         $data = $this->Dynamic_model->getDataJbtn($iddept);
