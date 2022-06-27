@@ -18,7 +18,7 @@ class Dynamic_model extends CI_Model
         return $this->db->get_where('wilayah', ['pos_id' => $idpos])->result();
     }
 
-    public function getDataJbtn($idjbtn)
+    public function getDataJbtn($iddept)
     {
         return $this->db->get_where('jbtn', ['jbtn_id' => $iddept])->result();
     }
