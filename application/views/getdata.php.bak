@@ -23,7 +23,7 @@
                             <label for="dept">Departemen</label>
                             <select class="form-control" id="dept" name="dept" required>
                                 <option value="">--Pilih Departemen--</option>
-                                <?php foreach ($dept as $dept) : ?>
+                                <?php foreach ($post as $dept) : ?>
                                     <option value="<?= $dept['dept_id']; ?>"><?= $dept['dept_nama']; ?></option>
                                 <?php endforeach; ?>
                             </select>
@@ -90,17 +90,17 @@
                 });
             });
 
-            $('#wil').change(function() {
+            $('#dept').change(function() {
                 var id = $(this).val();
                 $.ajax({
                     type: "POST",
-                    url: "<?= base_url('select/getDesa') ?>",
+                    url: "<?= base_url('select/getJbtn') ?>",
                     data: {
                         id: id
                     },
                     dataType: "JSON",
                     success: function(response) {
-                        $('#desa').html(response);
+                        $('#jbtn').html(response);
                     }
                 });
             });
