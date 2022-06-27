@@ -41,8 +41,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="desa">Jabatan</label>
-                            <select class="form-control" id="desa" name="desa" required>
+                            <label for="jbtn">Jabatan</label>
+                            <select class="form-control" id="jbtn" name="jbtn" required>
                                 <option value="">--Pilih Jabatan--</option>
                             </select>
                         </div>

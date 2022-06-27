@@ -90,17 +90,17 @@
                 });
             });
 
-            $('#wil').change(function() {
+            $('#dept').change(function() {
                 var id = $(this).val();
                 $.ajax({
                     type: "POST",
-                    url: "<?= base_url('select/getDesa') ?>",
+                    url: "<?= base_url('select/getJbtn') ?>",
                     data: {
                         id: id
                     },
                     dataType: "JSON",
                     success: function(response) {
-                        $('#desa').html(response);
+                        $('#jbtn').html(response);
                     }
                 });
             });
